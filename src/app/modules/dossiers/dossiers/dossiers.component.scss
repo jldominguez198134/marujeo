@@ -1,0 +1,95 @@
+@import "../../../../assets/scss/vars";
+
+.dossiers {
+  font-size: 1rem;
+  margin-top: 10%;
+  color: $color-txt-dossiers;
+
+  > .container {
+    > .row {
+      margin-bottom: 20px;
+
+      > * {
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .dossiers-container {
+    border-radius: 5px;
+    border: 2px solid $color-main-dark;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+0,ffffff+51,ffffff+100 */
+    background: #f0f0f0; /* Old browsers */
+    background: -moz-linear-gradient(top, #f0f0f0 0%, #ffffff 51%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f0f0f0 0%,#ffffff 51%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f0f0f0 0%,#ffffff 51%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+    > * {
+      .row {
+        > * {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .dossiers-header {
+    }
+    .dossier {
+      background: $color-light;
+      .row {
+        font-size: 0.8rem;
+
+        &::after {
+          content: '';
+          width: 95%;
+          height: 1px;
+          margin: 0 auto;
+          background: $color-main;
+        }
+
+        > * {
+          &:first-child {
+            text-align: center;
+          }
+          &:nth-child(2) {
+            color: $color-dark;
+          }
+          > * {
+            vertical-align: middle;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .dossiers-footer {
+      font-size: 0.7rem;
+      .row {
+        > * {
+          &:first-child {
+            .container {
+              > p {
+                margin-left: 10px;
+                display: inline-block;
+              }
+              select {
+                border: none;
+                background: none;
+                color: $color-header-light;
+              }
+            }
+          }
+          &:nth-child(2) {
+            text-align: right;
+
+            > p {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../../assets/scss/vars";
+
+header {
+  background: $color-header;
+  color: $color-light;
+  padding-top: 1px;
+
+  .content-color {
+    background: $color-header-light;
+
+    > .row {
+      margin-top: 5px;
+
+      > * {
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+        &:last-child {
+          border-left: 2px solid $color-header;
+        }
+      }
+
+      h1 {
+        color: $color-light;
+        display: inline-block;
+        small {
+          color: $color-header-light-lighter;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

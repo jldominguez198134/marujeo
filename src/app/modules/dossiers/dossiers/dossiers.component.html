@@ -1,0 +1,62 @@
+<div class="dossiers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="display-7">
+          Dossiers
+        </h2>
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-primary">Nuevo dossier</button>
+      </div>
+    </div>
+    <div class="dossiers-container">
+      <div class="dossiers-header">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="" alt="">
+          </div>
+          <div class="col-md-7">
+            Nombre
+          </div>
+          <div class="col-md-3">
+            Fecha
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let d of arrayDossiers | paginate: { itemsPerPage: itemsSize, currentPage: p, totalPages: pT }; let i = index" class="dossier">
+        <div class="row">
+          <div class="col-md-2">
+            <p>{{i + 1}}</p>
+          </div>
+          <div class="col-md-7">
+            <p>{{d.name}}</p>
+          </div>
+          <div class="col-md-3">
+            <p>{{d.modified | amUtc | amDateFormat: 'DD-MM-YYYY'}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="dossiers-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="container">
+              <p>Filas por página:</p>
+              <select (change)="onChange($event.target.value)">
+                <option value="5">5</option>
+                <option value="10">10</option>
+              </select>
+          </div>
+          </div>
+          <div class="col-md-2">
+            <p>Pagina: {{p}}</p>
+          </div>
+          <div class="col-md-4">
+            <pagination-controls  (pageChange)="p = $event" previousLabel="" nextLabel="">
+            </pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

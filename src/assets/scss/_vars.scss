@@ -1,0 +1,31 @@
+/* Colores */
+
+/* Color Header */
+$color-header: #186c9e;
+$color-header-light: #0093d0;
+$color-header-light-darker: darken($color-header-light, 20%);
+$color-header-light-dark: darken($color-header-light, 10%);
+$color-header-light-light: lighten($color-header-light, 10%);
+$color-header-light-lighter: lighten($color-header-light, 20%);
+$color-header-light-lightest: lighten($color-header-light, 22%);
+
+/* Color Main */
+$color-main: #f0f0f0;
+$color-main-darker: darken($color-main, 20%);
+$color-main-dark: darken($color-main, 10%);
+$color-main-light: lighten($color-main, 10%);
+$color-main-lighter: lighten($color-main, 20%);
+$color-main-lightest: lighten($color-main, 22%);
+
+/* Color blanco */
+$color-light: #ffffff;
+
+/* Color negro */
+$color-dark: #000000;
+$color-dark-light: lighten($color-dark, 10%);
+$color-dark-lighter: lighten($color-dark, 20%);
+$color-dark-lightest: lighten($color-dark, 22%);
+
+/* Color Texto Dossiers */
+$color-txt-dossiers: #7f7f7f;
+

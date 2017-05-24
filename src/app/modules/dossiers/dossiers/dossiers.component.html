@@ -24,16 +24,16 @@
           </div>
         </div>
       </div>
-      <div *ngFor="let d of arrayDossiers | paginate: { itemsPerPage: itemsSize, currentPage: p, totalPages: pT }; let i = index" class="dossier">
+      <div *ngFor="let d of arrayFinal | paginate: { itemsPerPage: itemsSize, currentPage: p, totalPages: pT }; let i = index" class="dossier">
         <div class="row">
           <div class="col-md-2">
-            <p>{{i + 1}}</p>
+            <p>{{d.id}}</p>
           </div>
           <div class="col-md-7">
-            <p>{{d.name}}</p>
+            <p>{{d.dossier}}</p>
           </div>
           <div class="col-md-3">
-            <p>{{d.modified | amUtc | amDateFormat: 'DD-MM-YYYY'}}</p>
+            <p>{{d.fecha | amUtc | amDateFormat: 'DD-MM-YYYY'}}</p>
           </div>
         </div>
       </div>
@@ -45,6 +45,7 @@
               <select (change)="onChange($event.target.value)">
                 <option value="5">5</option>
                 <option value="10">10</option>
+                <option value="15">15</option>
               </select>
           </div>
           </div>
